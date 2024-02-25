@@ -1,6 +1,8 @@
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 import { ThemeProvider, useTheme } from "./utils/theme-provider";
 import Header from "./components/header";
+import Footer from "./components/footer";
+
 import "./tailwind.css";
 
 function App() {
@@ -13,9 +15,12 @@ function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-white text-black antialiased dark:bg-zinc-900 dark:text-white">
+      <body className="flex flex-col min-h-screen bg-white text-black antialiased dark:bg-neutral-800 dark:text-white">
         <Header />
-        <Outlet />
+        <main className="mb-auto flex flex-col justify-center px-10 lg:px-20 sm:px-8">
+          <Outlet />
+        </main>
+        <Footer />
         <ScrollRestoration />
         <Scripts />
       </body>
