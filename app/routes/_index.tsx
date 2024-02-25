@@ -1,5 +1,4 @@
 import type { MetaFunction } from "@remix-run/node";
-import ThemeSwitcher from "~/components/theme-switcher";
 
 export const meta: MetaFunction = () => {
   return [{ title: "New Remix App" }, { name: "description", content: "Welcome to Remix!" }];
@@ -8,7 +7,6 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div className="mt-10 text-center">
-      <ThemeSwitcher />
       <h1 className="my-4 text-2xl">Welcome to Remix</h1>
       <ul>
         <li>

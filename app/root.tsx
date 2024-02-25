@@ -1,5 +1,6 @@
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 import { ThemeProvider, useTheme } from "./utils/theme-provider";
+import Header from "./components/header";
 import "./tailwind.css";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Links />
       </head>
       <body className="bg-white text-black antialiased dark:bg-zinc-900 dark:text-white">
+        <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
