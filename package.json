@@ -16,12 +16,19 @@
     "@remix-run/node": "^2.7.2",
     "@remix-run/react": "^2.7.2",
     "@remix-run/serve": "^2.7.2",
+    "gray-matter": "^4.0.3",
     "isbot": "^4.1.0",
+    "mdx-bundler": "^10.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "reading-time": "^1.5.0",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-slug": "^6.0.0",
+    "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.7.2",
+    "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.4",

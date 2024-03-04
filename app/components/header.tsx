@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header className="px-8 py-10">
       <nav className="text-primary mx-auto flex max-w-8xl items-center justify-between">
-        <div className="mr-3">
+        <div>
           {/* <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-7 h-7">
             <path
               strokeLinecap="round"
