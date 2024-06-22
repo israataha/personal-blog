@@ -8,7 +8,7 @@ export interface MdxFrontMatter {
   tags: string[];
   draft?: boolean;
   description: string;
-  images?: string[] | string;
+  image?: string;
   readingTime: ReadingTime;
   slug: string;
 }

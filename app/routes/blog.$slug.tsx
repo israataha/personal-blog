@@ -1,9 +1,16 @@
-import { LoaderFunction } from "@remix-run/node";
+import { LoaderFunction, MetaFunction, SerializeFrom } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import { useMemo } from "react";
 import { getMDXComponent } from "mdx-bundler/client";
 import { getPost } from "~/utils/mdx.server";
 import { formatDate } from "~/utils/date";
+
+export const meta: MetaFunction = ({ data }) => {
+  const { post } = data as SerializeFrom<typeof loader>;
+  const { frontmatter } = post;
+
+  return [{ title: frontmatter.title }];
+};
 
 export const loader: LoaderFunction = async ({ params }) => {
   if (!params.slug)

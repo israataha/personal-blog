@@ -13,7 +13,7 @@ export default function Footer() {
           <Icon name="twitter" href={metadata.x} />
         </div>
         <p className="text-center text-base text-gray-400">
-          Israa Taha • &copy; {new Date().getFullYear()} • All rights reserved
+          &copy; {new Date().getFullYear()} Israa Taha • All rights reserved
         </p>
       </div>
     </footer>

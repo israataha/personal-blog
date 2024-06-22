@@ -1,8 +1,12 @@
-import { LoaderFunction } from "@remix-run/node";
+import { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import { MdxFrontMatter } from "~/types/mdx";
 import { formatDate } from "~/utils/date";
 import { getPosts } from "~/utils/mdx.server";
+
+export const meta: MetaFunction = () => {
+  return [{ title: "Blog | Israa Taha" }];
+};
 
 export const loader: LoaderFunction = async () => {
   let posts: MdxFrontMatter[] = [];

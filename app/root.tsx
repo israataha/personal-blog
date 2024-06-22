@@ -1,4 +1,4 @@
-import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration, useRouteError } from "@remix-run/react";
 import { ThemeProvider, useTheme } from "./utils/theme-provider";
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -33,5 +33,15 @@ export default function AppWithProviders() {
     <ThemeProvider>
       <App />
     </ThemeProvider>
+  );
+}
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+  console.error(error);
+  return (
+    <main>
+      <h1>Unable to fetch list of blog posts. Please check back later</h1>
+    </main>
   );
 }
